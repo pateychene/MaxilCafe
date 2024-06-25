@@ -1,0 +1,244 @@
+// Variables
+$primary-color: #2B6B4D; // Vert foncé
+$secondary-color: #A3D5AB; // Vert clair
+$background-color: #F7F7F7; // Blanc cassé
+$text-color: #333; // Gris foncé
+$header-height: 60px;
+$font-stack-sans: 'Inter', sans-serif;
+$font-stack-serif: 'Playfair Display', serif;
+
+// CSS Reset pour assurer une base propre
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack-sans;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+  overflow-x: hidden; // Empêcher le défilement horizontal non désiré
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: $font-stack-serif;
+  color: $secondary-color;
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  text-align: center;
+
+  .nav {
+    margin-top: 10px;
+
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: $secondary-color;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries pour grands écrans
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    .nav {
+      .nav-toggle {
+        display: none;
+      }
+
+      .nav-list {
+        flex-direction: row;
+
+        li {
+          margin: 0 15px;
+
+          a {
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home {
+  background: url('../assets/images/mountain.jpg') no-repeat center center;
+  background-size: cover;
+  color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - $header-height); // Ajuster la hauteur de la section home en fonction de la hauteur de l'en-tête
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.menu, .about, .contact {
+  padding: 60px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.menu {
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  .btn {
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: lighten($secondary-color, 10%);
+    }
+  }
+}
+
+.contact .form-group {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 15px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  button.btn {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.footer {
+  background-color: $primary-color;
+  color: $secondary-color;
+  text-align: center;
+  padding: 20px 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+// Navigation Mobile
+@media (max-width: 767px) {
+  .header {
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-list {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}

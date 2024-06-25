@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Maxil - Restaurant/Bar à Massat</title>
+    <!-- Importation des polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Le Maxil</h1>
+            <p>Restaurant/Bar à Massat, Ariège</p>
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+                <ul class="nav-list">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="home">
+            <div class="container">
+                <h2>Bienvenue au Maxil</h2>
+                <p>Un lieu chaleureux au cœur des montagnes de l'Ariège</p>
+            </div>
+        </section>
+
+        <section id="menu" class="menu">
+            <div class="container">
+                <h2>Notre Menu</h2>
+                <p>Découvrez nos délices gastronomiques en consultant notre menu.</p>
+                <a href="assets/pdf/menu.pdf" target="_blank" class="btn">Voir le Menu</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>À propos de nous</h2>
+                <p>Le Maxil est plus qu'un simple restaurant. C'est un lieu de rencontre pour les amateurs de bonne cuisine et de la montagne.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Le Maxil. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
