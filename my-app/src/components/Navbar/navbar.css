@@ -1,0 +1,46 @@
+/* Styles personnalisés pour la navbar */
+.navbar-custom {
+    background-color:#252525; /* Couleur de fond orange vif */
+    padding: 1rem;
+  }
+  
+  .navbar-brand-custom {
+    color: #252525;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .navbar-brand-custom img {
+    width: 50px; /* Ajuste la largeur de l'image */
+    height: auto; /* Maintient le ratio d'aspect */
+    margin-right: 10px; /* Espace entre le logo et le texte */
+    border: none; /* Supprime toute bordure par défaut */
+    outline: none; /* Supprime l'outline */
+  }
+  
+ 
+  
+  .nav-link-custom {
+    color: #252525;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-link-custom:hover {
+    color: #252525;
+    background-color: #252525;
+    border-radius: 5px;
+    scale: 1.1;
+  }
+  
+  .navbar-toggler {
+    border-color:#252525;
+  
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%2870, 70, 70, 0.8%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
