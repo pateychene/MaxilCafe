@@ -1,17 +1,24 @@
+/* Styles pour HomePage */
 
+/* Container principal sans bordures avec position relative */
 .homepage-container {
-    background-color: #f9f9f9;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .homepage-container h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .homepage-container p {
-    font-size: 1.2rem;
-    color: #666;
-  }
+  position: relative; /* Permet le positionnement superposé par rapport au dropdown */
+  z-index: 1; /* Assure que le contenu de la homepage est sous la navbar */
+  padding: 2rem 1rem; /* Padding pour espacer le contenu du bord */
+  /* Couleur de fond légère pour le contraste */
+}
+
+/* Titre de la page */
+.homepage-title {
+  color: #252525; /* Couleur du texte */
+  font-size: 2.5rem; /* Taille du texte pour le titre */
+  margin-bottom: 1rem; /* Espace sous le titre */
+}
+
+/* Description sous le titre */
+.homepage-description {
+  color: #555555; /* Couleur du texte légèrement plus claire */
+  font-size: 1.2rem; /* Taille du texte pour la description */
+  line-height: 1.6; /* Hauteur de ligne pour un texte plus lisible */
+  margin-bottom: 2rem; /* Espace sous la description */
+}

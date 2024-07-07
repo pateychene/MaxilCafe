@@ -1,6 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './carousel.css'; // Importe les styles spécifiques au carousel
+import image1 from '../../assets/Massat1.jpeg';  // Chemin vers votre image locale
+import image2 from '../../assets/Massat2.jpeg';
+import image3 from '../../assets/Massat3.jpeg';
+
 
 function CarouselSection() {
   return (
@@ -8,7 +12,7 @@ function CarouselSection() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400.png?text=Slide+1" // Remplace par ton image
+          src={image1} // Remplace par ton image
           alt="First slide"
         />
         <Carousel.Caption>
@@ -19,7 +23,7 @@ function CarouselSection() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400.png?text=Slide+2" // Remplace par ton image
+          src={image2}// Remplace par ton image
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -30,7 +34,7 @@ function CarouselSection() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400.png?text=Slide+3" // Remplace par ton image
+          src={image3} // Remplace par ton image
           alt="Third slide"
         />
         <Carousel.Caption>
